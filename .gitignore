@@ -1,1 +1,6 @@
-udacity-c3-deployment
+udacity-c3-deployment/k8s
+udacity-c3-deployment/docker/docker-compose-build.yaml
+udacity-c3-deployment/docker/docker-compose.yaml
+udacity-c3-deployment/docker/Dockerfile
+udacity-c3-deployment/docker/nginx.conf
+udacity-c3-deployment/docker/README.md
