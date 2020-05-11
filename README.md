@@ -38,9 +38,9 @@ You'll need to install docker https://docs.docker.com/install/.
 * [Node.js](https://maven.apache.org/) - Backend Framework
 * [Postgress](https://rometools.github.io/rome/) - Database
 * [Travis-CI](https://travis-ci.org/) - CI Tool
-* [Docker] (https://www.docker.com/get-started) - Container Creation
-* [Kubernetes] (https://kubernetes.io/) - Container Orchestration Service
-* [AWS] (https://aws.amazon.com/) - Cloud Service Provider
+* [Docker](https://www.docker.com/get-started) - Container Creation
+* [Kubernetes](https://kubernetes.io/) - Container Orchestration Service
+* [AWS](https://aws.amazon.com/) - Cloud Service Provider
 
 ## Acknowledgments
 
