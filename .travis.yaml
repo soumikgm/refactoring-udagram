@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - docker
+
+# Pre-testing install
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  - docker --version # print the version
+  - docker build -t reverseproxy ./udacity-c3-reverse-proxy
+  - docker build -t udacity-frontend ./udacity-c3-frontend
+  - docker build -t udacity-restapi-feed ./udacity-c3-restapi-feed
+  - docker build -t udacity-restapi-user ./udacity-c3-restapi-user
+  - docker tag reverseproxy "$DOCKER_USERNAME"/reverseproxy
+  - docker tag udacity-frontend "$DOCKER_USERNAME"/udacity-frontend:local
+  - docker tag udacity-restapi-feed "$DOCKER_USERNAME"/udacity-restapi-feed
+  - docker tag udacity-restapi-user "$DOCKER_USERNAME"/udacity-restapi-user
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push "$DOCKER_USERNAME"/reverseproxy
+  - docker push "$DOCKER_USERNAME"/udacity-frontend
+  - docker push "$DOCKER_USERNAME"/udacity-restapi-feed
+  - docker push "$DOCKER_USERNAME"/udacity-restapi-user
