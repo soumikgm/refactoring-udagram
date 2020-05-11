@@ -34,6 +34,15 @@ Go to localhost:8100/home and see your frontend!
 * You'll need to have an AWS S3 Bucket Enabled
 * You'll need to have an AWS RDS set up that has access to your S3 bucket
 
+## My DockerHub profile
+
+* You can find all my public DockerHub Images here - https://hub.docker.com/u/soumikgm
+* The images used in this project are
+    1. udacity-restapi-user
+    2. udacity-restapi-feed
+    3. udacity-frontend
+    4. reverseproxy
+
 ## Built With
 
 * [Ionic](http://www.dropwizard.io/1.0.2/docs/) - Frontend framework
